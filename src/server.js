@@ -42,7 +42,7 @@ app.ports.responses.subscribe(({ req, res, content }) => {
       return;
 
     default:
-      res.writeHead(content.code);
+      res.writeHead(content.code, content.headers);
       res.end();
       return;
   }
